@@ -579,18 +579,18 @@ plot_multiplex3D <-
       igraph::rglplot(g.aggr, layout = layout.layer,
               rescale = F)
       
-      if (!is.na(layer.labels) && !is.null(layer.labels)) {
-        text3d(
-          -1 + (l - 1) * LAYER_SHIFT_X,
-          -1 + (l - 1) * LAYER_SHIFT_Y,
-          d + 0.1,
-          text = "Aggregate",
-          adj = 0.2,
-          color = "black",
-          family = "sans",
-          cex = layer.labels.cex
-        )
-      }
+      #if (!is.na(layer.labels) && !is.null(layer.labels)) {
+      text3d(
+        -1 + (l - 1) * LAYER_SHIFT_X,
+        -1 + (l - 1) * LAYER_SHIFT_Y,
+        d + 0.1,
+        text = "Aggregate",
+        adj = 0.2,
+        color = "black",
+        family = "sans",
+        cex = layer.labels.cex
+      )
+      #}
       
     }
     
